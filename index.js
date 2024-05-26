@@ -7,7 +7,7 @@ const TELEGRAM_API_URL = `https://api.telegram.org/bot${API_TOKEN}`
 
 const bot = new TelegramApi(API_TOKEN, {polling: true})
 
-bot.on('message', (msg) => {
+bot.on('message', async (msg) => {
     const chatId = msg.chat.id
-    bot.sendMessage(chatId, chatId)
+    await bot.sendMessage(chatId, chatId)
 })
