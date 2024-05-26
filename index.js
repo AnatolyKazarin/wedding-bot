@@ -1,7 +1,8 @@
+const config = require('dotenv').config()
+
 const TelegramApi = require('node-telegram-bot-api')
 
-// Replace 'YOUR_API_TOKEN' with your bot's API token
-const API_TOKEN = '7437370733:AAGY2Bmfyvpch7btEsWURgri3H1GwIxMG2I'
+const API_TOKEN = process.env.TELEGRAM_TOKEN
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${API_TOKEN}`
 
 const bot = new TelegramApi(API_TOKEN, {polling: true})
